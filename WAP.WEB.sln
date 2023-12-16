@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAP.WEB", "WAP.WEB\WAP.WEB.csproj", "{7AE43C6E-1EDB-4687-887C-0A03FED574D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAP.DATAACCESS", "WAP.DATAACCESS\WAP.DATAACCESS.csproj", "{27D24A2C-225A-4FBD-BFCA-DA66E611CBA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AE43C6E-1EDB-4687-887C-0A03FED574D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE43C6E-1EDB-4687-887C-0A03FED574D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE43C6E-1EDB-4687-887C-0A03FED574D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE43C6E-1EDB-4687-887C-0A03FED574D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D24A2C-225A-4FBD-BFCA-DA66E611CBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D24A2C-225A-4FBD-BFCA-DA66E611CBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D24A2C-225A-4FBD-BFCA-DA66E611CBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D24A2C-225A-4FBD-BFCA-DA66E611CBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AC45095-4C00-4B11-B6E2-8C086BDDC8EE}
+	EndGlobalSection
+EndGlobal

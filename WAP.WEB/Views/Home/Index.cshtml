@@ -1,0 +1,543 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    i {
+        font-size: 75%;
+        display: block;
+    }
+
+    body {
+        font-family: Tahoma;
+        text-align: left;
+    }
+
+    #back {
+        background-color: #FFA100;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 5px 5px 5px #888888;
+        min-width: 320px;
+        width: 100%;
+        max-width: 400px;
+        height: 625px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+
+    #login_panel {
+        margin-top: 30px;
+        margin: 30px auto 0 auto;
+        width: 80%;
+        height: 390px;
+        padding: 10px;
+        position: inherit;
+        text-shadow: 1px 1px 3px #000;
+        background: #191919;
+        border: 2px solid transparent;
+        -webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-opacity: 0.75;
+        -khtml-opacity: 0.75;
+        -moz-opacity: 0.75;
+        -ms-opacity: 0.75;
+        -o-opacity: 0.75;
+        opacity: 0.75;
+        zoom: 1;
+        -webkit-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+        -khtml-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+        -moz-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+        -ms-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+        -o-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+        box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+    }
+
+    #alt_bilgi {
+        position: inherit;
+        margin-top: 15px;
+        color: White;
+        font-family: Tahoma;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #ust_bilgi {
+        position: relative;
+        top: 15px;
+        color: #9E1E88;
+        font-family: Tahoma;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .uyari {
+        font-size: 12px;
+        font-weight: normal;
+        color: White;
+        margin-bottom: 10px;
+    }
+
+    .dokuman {
+        font-size: 12px;
+        font-weight: normal;
+        color: White;
+        margin-top: 10px;
+    }
+
+    .etiket {
+        font-size: 14px;
+        font-weight: bold;
+        color: White;
+        width: 120px;
+    }
+
+    .dugme {
+        padding-right: 29px;
+    }
+
+    a {
+        font-size: 12px;
+        font-weight: bold;
+        color: White;
+        text-decoration: none;
+    }
+
+    .dokuman table td {
+        vertical-align: top;
+        text-align: center;
+        border-right: solid 1px gray;
+    }
+
+        .dokuman table td:last-child {
+            text-align: center;
+            border-right: solid 0px gray;
+        }
+</style>
+<body>
+    <form method="post" action="./KullaniciGirisi.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="y/VYwN6cvZ7Gk97LfLx5uYlT2T5fpRNnQq8oshdUKLmSToyXmzrIaDCUHttj+F97pZGtTjJ0Ol1vOeT2+/SvKX+Mm6UlVJtF+zDA1F1p97rH6dgXQ1g7RfaMnOq9l5QTNOuhKeUV0eiKVeogmduXmwOTr+1CHysprSti7xhxvB8=">
+        </div>
+        <!-- <script type="b82b3f25f05db95537bf8482-text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+        </script>
+        <script src="WebResource.axd" type="b82b3f25f05db95537bf8482-text/javascript"></script>
+        <script src="ScriptResource_1.axd" type="b82b3f25f05db95537bf8482-text/javascript"></script>
+        <script src="ScriptResource.axd" type="b82b3f25f05db95537bf8482-text/javascript"></script> -->
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B7D1C911">
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="l3nyk9d0GbYWea5t3GDVRqbsJSLG45HEHUkzPX7r9jTMSCkJC3nMtt5DyHH6Or1VL6rz9dZoDFKF4+TS7v4aBtFDELIlx7I2bmZoVFyExRRxmQECA5xSvPOk45yfdoeH">
+        </div>
+        <!-- <script type="b82b3f25f05db95537bf8482-text/javascript">
+        //<![CDATA[
+        Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+        //]]>
+        </script> -->
+        <style type="text/css">
+            i {
+                font-size: 75%;
+                display: block;
+            }
+
+            body {
+                font-family: Tahoma;
+                text-align: left;
+            }
+
+            #back {
+                background-color: #FFA100;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 5px 5px 5px #888888;
+                min-width: 320px;
+                width: 100%;
+                max-width: 400px;
+                height: 625px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5px;
+            }
+
+            #login_panel {
+                margin-top: 30px;
+                margin: 30px auto 0 auto;
+                width: 80%;
+                height: 390px;
+                padding: 10px;
+                position: inherit;
+                text-shadow: 1px 1px 3px #000;
+                background: #191919;
+                border: 2px solid transparent;
+                -webkit-border-radius: 10px;
+                -khtml-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                border-radius: 10px;
+                -webkit-opacity: 0.75;
+                -khtml-opacity: 0.75;
+                -moz-opacity: 0.75;
+                -ms-opacity: 0.75;
+                -o-opacity: 0.75;
+                opacity: 0.75;
+                zoom: 1;
+                -webkit-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+                -khtml-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+                -moz-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+                -ms-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+                -o-box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+                box-shadow: 2px 2px 10px rgba(25, 25, 25, 0.25);
+            }
+
+            #alt_bilgi {
+                position: inherit;
+                margin-top: 15px;
+                color: White;
+                font-family: Tahoma;
+                font-size: 22px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            #ust_bilgi {
+                position: relative;
+                top: 15px;
+                color: #9E1E88;
+                font-family: Tahoma;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 20px;
+            }
+
+            .uyari {
+                font-size: 12px;
+                font-weight: normal;
+                color: White;
+                margin-bottom: 10px;
+            }
+
+            .dokuman {
+                font-size: 12px;
+                font-weight: normal;
+                color: White;
+                margin-top: 10px;
+            }
+
+            .etiket {
+                font-size: 14px;
+                font-weight: bold;
+                color: White;
+                width: 120px;
+            }
+
+            .dugme {
+                padding-right: 29px;
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: bold;
+                color: White;
+                text-decoration: none;
+            }
+
+            .dokuman table td {
+                vertical-align: top;
+                text-align: center;
+                border-right: solid 1px gray;
+            }
+
+                .dokuman table td:last-child {
+                    text-align: center;
+                    border-right: solid 0px gray;
+                }
+        </style>
+
+        <img id="Image1">
+        <div style="position:fixed; width:100%;height
+        :100%;overflow:scroll; z-index:0">
+            <table style="width:100%; height:100%;">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align:middle;">
+                            <div id="back">
+                                <div id="ust_bilgi">
+                                    <table style="width: 100%;">
+                                        <tbody>
+                                            <tr style="width: 86%">
+                                                <td> <img src="~/Scripts/images/yeni_logo.png" style="border-width: 0px; width: 100%;"></td>
+                                                <td style="width: 26px;vertical-align: top">
+                                                </td>
+                                                <td style="width: 1px;vertical-align: top"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    MÜBİS
+                                    <br>
+                                    MALTEPE ÜNİVERSİTESİ BİLİŞİM SİSTEMİ<br>
+                                    <i> MALTEPE UNIVERSITY INFORMATION SYSTEM </i>
+                                </div>
+                                <div id="login_panel">
+                                    <div class="uyari">
+                                        Kullanıcı adı ve parola; öğrenci için öğrenci numarası ve tek şifre, Öğretim elemanı için bilgisayarını açarken kullandığı kullanıcı adı ve parolasıdır. <br>
+                                        <i>
+                                            For students, the user name is the student number.
+                                            For others, the user name is the e-mail address.
+                                        </i>
+                                    </div>
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td align="right" class="etiket">
+                                                    Kullanıcı Adı
+                                                    <i> User Name </i>
+                                                </td>
+                                                <td>
+                                                    <table id="txtKullaniciAdi_ET" class="dxeValidStEditorTable dxeRoot_PlasticBlue" style="margin:2px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td id="txtKullaniciAdi_CC" class="dxeErrorFrame_PlasticBlue dxeErrorFrameSys dxeControlsCell_PlasticBlue dx-wrap" style="border-width:1px;border-style:Solid;border-right-width:0px;padding-left:4px;padding-right:0px;padding-top:3px;padding-bottom:3px;vertical-align:middle;">
+                                                                    <table title="Kullanıcı adı ve parola; öğrenci için öğrenci numarası ve tek şifre, Öğretim elemanı için bilgisayarını açarken kullandığı kullanıcı adı ve parolasıdır." class="dxeTextBoxSys dxeTextBox_PlasticBlue dxeTextBoxDefaultWidthSys" id="txtKullaniciAdi" style="height:20px;width:170px;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="dxic" style="width:100%;padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px;">
+                                                                                    <input class="dxeEditArea_PlasticBlue dxeEditAreaSys" id="txtKullaniciAdi_I" name="txtKullaniciAdi"
+                                                                                           type="text" data-cf-modified-b82b3f25f05db95537bf8482-="">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td id="txtKullaniciAdi_EC" class="dxeErrorCell_PlasticBlue dxeErrorFrame_PlasticBlue dxeErrorFrameSys dxeErrorCellSys dx-wrap" style="color:Red;border-color:#FD4D3E;border-width:1px;border-style:Solid;border-left-width:0px;padding-right:3px;vertical-align:middle;visibility:hidden;">
+                                                                    <table style="width:100%;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td><img id="txtKullaniciAdi_EI" class="dxEditors_edtError_PlasticBlue" src="DXR.axd" alt=""></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- <script id="dxss_726748441" type="b82b3f25f05db95537bf8482-text/javascript">
+                                                    <!--
+                                                    document.getElementById("txtKullaniciAdi_ET").setAttribute("errorFrame", "errorFrame");
+
+                                                    var dxo = new ASPxClientTextBox('txtKullaniciAdi');
+                                                    dxo.InitGlobalVariable('txtKullaniciAdi');
+                                                    dxo.validationGroup = "grpKullaniciGirisi";
+                                                    dxo.customValidationEnabled = true;
+                                                    dxo.isValid = true;
+                                                    dxo.validationPatterns = [ new ASPx.RequiredFieldValidationPattern('Kullanıcı adı boş geçilemez.') ];
+                                                    dxo.causesValidation = true;
+                                                    dxo.setFocusOnError = true;
+                                                    dxo.errorDisplayMode = "i";
+                                                    dxo.errorImageIsAssigned = true;
+                                                    dxo.RequireStyleDecoration();
+                                                    dxo.styleDecoration.AddStyle('I','dxeInvalid_PlasticBlue','');
+                                                    dxo.styleDecoration.AddStyle('F','dxeFocused_PlasticBlue','');
+                                                    dxo.AfterCreate();
+
+                                                    //-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" class="etiket">
+                                                    Parola
+                                                    <i> Password </i>
+                                                </td>
+                                                <td>
+                                                    <table id="txtSifre_ET" class="dxeValidStEditorTable dxeRoot_PlasticBlue" style="margin:2px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td id="txtSifre_CC" class="dxeErrorFrame_PlasticBlue dxeErrorFrameSys dxeControlsCell_PlasticBlue dx-wrap" style="border-width:1px;border-style:Solid;border-right-width:0px;padding-left:4px;padding-right:0px;padding-top:3px;padding-bottom:3px;vertical-align:middle;">
+                                                                    <table title="Kullanıcı adı ve parola; öğrenci için öğrenci numarası ve tek şifre, Öğretim elemanı için bilgisayarını açarken kullandığı kullanıcı adı ve parolasıdır." class="dxeTextBoxSys dxeTextBox_PlasticBlue dxeTextBoxDefaultWidthSys" id="txtSifre" style="width:170px;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="dxic" style="width:100%;padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px;"><input class="dxeEditArea_PlasticBlue dxeEditAreaSys" id="txtSifre_I" name="txtSifre" onfocus="if (!window.__cfRLUnblockHandlers) return false; ASPx.EGotFocus('txtSifre')" onblur="if (!window.__cfRLUnblockHandlers) return false; ASPx.ELostFocus('txtSifre')" onchange="if (!window.__cfRLUnblockHandlers) return false; ASPx.EValueChanged('txtSifre')" type="password" data-cf-modified-b82b3f25f05db95537bf8482-=""></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td id="txtSifre_EC" class="dxeErrorCell_PlasticBlue dxeErrorFrame_PlasticBlue dxeErrorFrameSys dxeErrorCellSys dx-wrap" style="color:Red;border-color:#FD4D3E;border-width:1px;border-style:Solid;border-left-width:0px;padding-right:3px;vertical-align:middle;visibility:hidden;">
+                                                                    <table style="width:100%;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td><img id="txtSifre_EI" class="dxEditors_edtError_PlasticBlue" src="DXR.axd" alt=""></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td></td>
+                                                <td align="right" class="dugme">
+                                                    <div class="dxbButton_PlasticBlue dxbButtonSys" id="btnGiris" style="margin:2px;-webkit-touch-callout:none;">
+                                                        <div class="dxb">
+                                                            <div class="dxb-hbc">
+                                                                <input id="btnGiris_I" class="dxb-hb" value="Giriş / Login" type="submit" name="btnGiris">
+                                                            </div><span class="dx-vam">Giriş / Login</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <script id="dxss_423483527" type="b82b3f25f05db95537bf8482-text/javascript">
+                                                    <!--
+                                                    ASPx.AddHoverItems('btnGiris',[[['dxbButtonHover_PlasticBlue'],[''],[''],['','TC']]]);
+                                                    ASPx.AddPressedItems('btnGiris',[[['dxbButtonPressed_PlasticBlue'],[''],[''],['','TC']]]);
+
+                                                    var dxo = new ASPxClientButton('btnGiris');
+                                                    dxo.InitGlobalVariable('btnGiris');
+                                                    dxo.autoPostBack = true;
+                                                    dxo.RegisterServerEventAssigned(['Click']);
+                                                    ASPx.AddSelectedItems('btnGiris',[[['dxbf'],[''],['CD']]]);
+                                                    dxo.validationGroup = "grpKullaniciGirisi";
+                                                    dxo.AfterCreate();
+
+                                                    //-->
+                                                    <!-- </script> -->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="dokuman">
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width:50%;">
+                                                        <a href="KUDES/Sso/ParolamiUnuttum.aspx" target="_blank">
+                                                            <img src="~/Scripts/images/Help.png" style="border-width: 0;"><br>
+                                                            Öğrenci Parolamı Unuttum <br> <i> Forgot my student password </i>
+                                                        </a>
+                                                    </td>
+                                                    <td style="width: 50%;">
+                                                        <a href="/KUDES/Personel/PersonelSifreSifirlama.aspx" target="_blank">
+                                                            <img src="~/Scripts/images/Help.png" style="border-width: 0;"><br>
+                                                            Personel Parolamı Sıfırla<br> <i> Reset Staff Password </i>
+                                                        </a>
+                                                        <a href="http://yardim.maltepe.edu.tr/" target="_blank" style="display: none;">
+                                                            <img src="~/Scripts/images/help-browser.png" style="border-width: 0; display: none; ">
+                                                            <br>
+                                                            Kullanıcı Klavuzu<br> <i> User Guide </i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="Div1" style="text-align: center; padding: 10px 98px">
+                                    <table style="width: 100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="https://www.facebook.com/maltepeuniversitesi" target="_blank">
+                                                        <img src="~/Scripts/images/iconfinder_facebook_circle_294710.png" width="28" style="border-width: 0;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://twitter.com/MaltepeEduTr" target="_blank">
+                                                        <img src="~/Scripts/images/iconfinder_twitter_circle_294709.png" width="28" style="border-width: 0;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://instagram.com/maltepeedutr/" target="_blank">
+                                                        <img src="~/Scripts/images/iconfinder_social-instagram-new-circle_1164349.png" width="28" style="border-width: 0;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://www.linkedin.com/edu/maltepe-%C3%BCniversitesi-17381" target="_blank">
+                                                        <img src="~/Scripts/images/iconfinder_linkedin_1632521%20%282%29.png" width="28" style="border-width: 0;">
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://www.youtube.com/channel/UCzqORMYj3JH533lJFXbvjDQ" target="_blank">
+                                                        <img src="~/Scripts/images/iconfinder_youtube_1632538%20%282%29.png" width="28" style="border-width: 0;">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tarayici_bildir" style="display: none;">
+            <table align="center" style="margin: 10px;">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            Tarayıcınızın sürümü geri kalmış görünüyor, Mübis tarayıcızı Mozilla Firefox ile
+                            güncellemenizi tavsiye eder.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <a href="http://www.mozilla.org/firefox" target="_blank">
+                                <img src="~/Scripts/images/firefox.png" alt="Firefox" style="border-width: 0;">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="chrome_kullanma" style="display: none;">
+            <table align="center" style="margin: 10px;">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            MÜBİS chrome tarayıcısını desteklememektedir, tarayıcı olarak Mozilla Firefox kullanmanızı
+                            tavsiye eder.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <a href="http://www.mozilla.org/firefox" target="_blank">
+                                <img src="~/Scripts/images/firefox.png" alt="Firefox" style="border-width: 0;">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <script type="b82b3f25f05db95537bf8482-text/javascript">
+        //<![CDATA[
+
+        var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdTrV9tm4YhMuZK_bFjxUAcnTGmyBBYRrwBp5V1bDa-QqCvULez1NWO_Z8hzBxDsSFQ2&t=638346665325447473';
+        WebForm_InitCallback();//]]>
+        </script> -->
+    </form>
+    <!-- <script src="js/rocket-loader.min.js" data-cf-settings="b82b3f25f05db95537bf8482-|49" defer=""></script> -->
+
+</body>
+</html>

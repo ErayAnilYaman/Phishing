@@ -1,0 +1,61 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<WAP.DATAACCESS.Models.Account>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<link href="~/Content/toastr.css" rel="stylesheet" />
+
+<table class="table table-bordered" id="table">
+    <tr>
+        <th>NAME</th>
+        <th>LASTNAME</th>
+        <th>EMAIL</th>
+        <th>PASSWORD</th>
+        <th>Delete</th>
+        <th>Update</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NAME</td>
+            <td>@item.LASTNAME</td>
+            <td>@item.EMAIL</td>
+            <td>@item.PASSWORD</td>
+            <td><a class="btn btn-danger btnDelete" onclick="deletebyid(@item.ACCOUNTID)"data-id="@item.ACCOUNTID">Delete</a></td>
+            <td><a class="btn btn-warning" href="/admin/update/@item.ACCOUNTID">Update</a></td>
+
+        </tr>
+    }
+</table>
+@Html.PagedListPager(Model, pageNumber => Url.Action("Index", new { pageNumber }), PagedListRenderOptions.Classic)
+<!-- #region style -->
+<style>
+    .update-quantity {
+        display: flex;
+        align-items: center;
+    }
+
+        .update-quantity button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+            .update-quantity button:hover {
+                background-color: #0056b3;
+            }
+</style>
+<!-- #endregion -->
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<!-- #endregion -->
