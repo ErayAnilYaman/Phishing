@@ -48,18 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\Base\IEntityRepositoryBase.cs" />
+    <Compile Include="Abstract\IAccountDal.cs" />
+    <Compile Include="Concrete\Base\EfEntityRepositoryBase.cs" />
+    <Compile Include="Concrete\AccountRepository.cs" />
     <Compile Include="Context\WAPContext.cs" />
     <Compile Include="Models\Abstract\IEntity.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountType.cs" />
+    <Compile Include="Models\EPost.cs" />
+    <Compile Include="Models\TestResult.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\Base\" />
-    <Folder Include="Concrete\Base\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
